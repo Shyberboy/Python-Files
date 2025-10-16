@@ -1,5 +1,6 @@
 matriks_a = []
 matriks_b = []
+matriks_perkalian = []
 
 baris_a = int(input("Banyak baris matriks A: "))
 kolom_a = int(input("Banyak kolom matriks A: "))
@@ -35,10 +36,10 @@ else:
             print(matriks_b[i][j], end='\t')
         print()
 
-    matriks_perkalian = [[0 for x in range(kolom_b)] for x in range(baris_a)]
-
     for i in range(baris_a):
+        matriks_perkalian.append([])
         for j in range(kolom_b):
+            matriks_perkalian[i].append(0)
             for k in range(kolom_a):
                 matriks_perkalian[i][j] += matriks_a[i][k] * matriks_b[k][j]
 

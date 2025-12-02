@@ -4,7 +4,7 @@ def random_triangle_area(a, b, c) :
     elif (a + b) <= c or (b + c) <= a or (a + c) <= b :
         print("These three sides can't make a triangle because one of the sides is bigger than or equal the two other sides combined.")
     else :
-        s = a + b + c
+        s = (a + b + c) / 2
         triangle_area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
         print(f"The area of the triangle made by these three sides is {triangle_area} unit.")
 
